@@ -1,0 +1,5 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>Tesla OAuth Callback</title></head>
+<body style="font-family:sans-serif;padding:2em"><h2>Tesla 授权码</h2>
+<p id="m"></p><textarea id="c" rows="4" cols="80" readonly></textarea><br><button onclick="navigator.clipboard.writeText(document.getElementById('c').value)">复制</button>
+<script>var p=new URLSearchParams(location.search);var c=p.get('code');
+document.getElementById('c').value=c||'';document.getElementById('m').textContent=c?('state='+(p.get('state')||'')+'  —— 请在10分钟内用此code换取token'):('未找到code参数 '+(p.get('error')||''));</script></body></html>
